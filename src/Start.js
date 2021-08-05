@@ -1,14 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import * as React from 'react';
+import React, {Component} from 'react';
 import { StyleSheet, Text, View,Button } from 'react-native';
 
-export default function Start() {
+export default class Start extends Component 
+{
+    render(){
   return (
     <View style={styles.container}>
-      <Button onPress={()=> this.props.navigation.navigate('SignIn')}>Sign In</Button>
-      <Button onPress={()=> this.props.navigation.navigate('SignUp')}>Sign Up</Button>
+      <Button 
+        style={styles.button} 
+        title="Sign In" 
+        onPress={()=>this.props.navigation.navigate('SignIn')}/>
+      <Button 
+        title="Sign Up" 
+        style={styles.button}
+        onPress={()=>this.props.navigation.navigate('SignUp')}/>
     </View>
   );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -20,4 +29,10 @@ const styles = StyleSheet.create({
     padding: 5,
     margin: 5,
   },
+  button:
+  {
+      paddingTop: 5,
+      marginTop:5,
+      color: 'red',
+  }
 });

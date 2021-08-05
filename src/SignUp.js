@@ -1,6 +1,6 @@
-import * as React, {Component, useState} from 'react';
-import { View,Text, SafeAreaVie,Picker,Alert,StyleSheet } from 'react-native';
-import { Button } from 'react-native-element';
+import React, {Component, useState} from 'react';
+import { View,Text, SafeAreaView,Picker,Alert,StyleSheet,Button} from 'react-native';
+// import {Button} from 'react-native-elements';
 import { TextInput } from 'react-native-paper';
 
 export class SignUp extends Component
@@ -19,7 +19,7 @@ export class SignUp extends Component
     {
         return(
             <SafeAreaView>
-                <View>
+                <View style={styling.MainContainer}>
                     <Text style={styling.TextStyle}>First Name</Text>
                     <TextInput
                         style={styling.TextStyle}
@@ -81,7 +81,7 @@ export class SignUp extends Component
                         keyboardType="default"></TextInput>
 
                     <Button 
-                        type="outline"
+                        // type="outline"
                         title="Sign Up"
                         onPress={this.newUser}
                         />
@@ -154,11 +154,9 @@ export class SignUp extends Component
 const styling=StyleSheet.create({
     MainContainer:
     {
-        flex: 1,
+        // flex: 1,
         height: '100%',
-        alignContent: 'center',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignContent: 'flex-start',
         padding: 5,
         margin: 5,
     },

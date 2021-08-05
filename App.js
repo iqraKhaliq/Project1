@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View,Button } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Start from './src/Start';
@@ -12,14 +13,14 @@ const myStack= createStackNavigator();
 
 function App() {
   return (
-   <Navigator>
+   <NavigationContainer>
      <myStack.Navigator initialRouteName="Start">
-       <myStack.Screen name="Start" component={Start} options={{header: false}}/>
-       <myStack.Screen name="SignIn" component={SignIn} options={{header: false}}/>
-       <myStack.Screen name="SignUp" component={SignUp} options={{header: false}}/>
-       <myStack.Screen name="Home" component={Home} options={{header: false}}/>
+       <myStack.Screen name="Start" component={Start} />
+       <myStack.Screen name="SignIn" component={SignIn} />
+       <myStack.Screen name="SignUp" component={SignUp} />
+       <myStack.Screen name="Home" component={Home} />
      </myStack.Navigator>
-   </Navigator>
+   </NavigationContainer>
   );
 }
 

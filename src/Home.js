@@ -1,6 +1,5 @@
-import * as React, { Component } from 'react';
+import React, { Component } from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import { Component } from 'react';
 
 export class Home extends Component
 {

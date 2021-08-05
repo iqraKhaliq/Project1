@@ -1,7 +1,7 @@
-import * as React, { Component, useState } from 'react';
+import React, { Component, useState } from 'react';
 import {View, Text,TextInput,Alert,StyleSheet} from 'react-native'; 
 import { Button } from 'react-native-paper';
-import { ThemeConsumer } from 'react-native-elements';
+// import { ThemeConsumer } from 'react-native-elements';
 
 export class SignIn extends Component
 {
@@ -31,7 +31,7 @@ export class SignIn extends Component
                     ></TextInput>
             <Button 
                 mode={'outlined'}
-                onPress={alert('Signing In')}> SignIn</Button>
+                onPress={()=> alert('Signing In')}> SignIn</Button>
             </View>
         )
     }
