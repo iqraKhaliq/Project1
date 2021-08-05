@@ -3,6 +3,11 @@ import React from 'react';
 import { StyleSheet, Text, View,Button } from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 
+import Start from './src/Start';
+import SignIn from './src/SignIn';
+import SignUp from './src/SignUp';
+import Home from './src/Home';
+
 const myStack= createStackNavigator();
 
 function App() {
